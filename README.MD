@@ -6,6 +6,16 @@
 Automated monthly financial reporting system with **Actual vs Budget variance analysis**,
 **data quality controls**, and **AI-based anomaly detection** — built on the Superstore dataset.
 
+## 📊 Power BI Dashboard
+
+Interactive report built with **Power BI Desktop** and **Power Query** from `financial_data_scored.csv` (Budget vs. Actual tracking and **Isolation Forest** anomaly detection).
+
+### 1. Financial Overview (`Overview`)
+![Overview Dashboard](dashboard/screenshots/overview_dashboard.png)
+
+### 2. Detected Anomalies (`Anomalies`)
+![Anomalies Dashboard](dashboard/screenshots/anomalies_dashboard.png)
+
 ## 🛠️ Tech Stack (matching job requirements)
 | Requirement | Implementation |
 |---|---|
