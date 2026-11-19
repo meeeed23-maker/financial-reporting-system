@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.ipynb_checkpoints
+.venv/
+venv/
+env/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Data (optionnel — tu peux garder le dataset si < 50 MB)
+# data/raw/*.csv
+# data/processed/*.csv
+
+# Reports (generated automatically by CI)
+reports/
+!reports/.gitkeep
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
