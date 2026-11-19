@@ -66,13 +66,23 @@ class DataQualityChecker:
 
 
 if __name__ == "__main__":
+    import os
+    from datetime import datetime
+
+    # 1. Charger les données
     df = pd.read_csv("data/processed/financial_data.csv")
+
+    # 2. Lancer les contrôles
     checker = DataQualityChecker(df)
     report = checker.run_all()
 
-    # Sauvegarder le rapport
-    with open("reports/quality_report.txt", "w") as f:
+    # 3. Créer le dossier 'reports' s'il n'existe pas (C'est LA correction)
+    os.makedirs("reports", exist_ok=True)
+
+    # 4. Sauvegarder le rapport avec l'encodage UTF-8
+    with open("reports/quality_report.txt", "w", encoding="utf-8") as f:
         f.write(f"Data Quality Report — {datetime.now()}\n")
         f.write("=" * 50 + "\n")
         f.write("\n".join(report))
+
     print(f"\n📄 Report saved to reports/quality_report.txt")
