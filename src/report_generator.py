@@ -119,13 +119,22 @@ class ReportGenerator:
 
 
 if __name__ == "__main__":
+    import os
+    from pathlib import Path
+
+    # 1. Charger les données scorées
     df = pd.read_csv("data/processed/financial_data_scored.csv")
 
-    # Trouver le dernier mois disponible
+    # 2. Trouver le dernier mois
     last_month = df['month'].max()
 
+    # 3. Créer le dossier de destination s'il n'existe pas (LA CORRECTION)
+    output_dir = Path("reports/generated")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # 4. Générer le rapport
     generator = ReportGenerator(df)
     generator.generate(
         month=last_month,
-        output_path=f"reports/generated/report_{last_month.replace('-', '_')}.xlsx"
+        output_path=output_dir / f"report_{last_month.replace('-', '_')}.xlsx"
     )
