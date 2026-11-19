@@ -11,10 +11,10 @@ Automated monthly financial reporting system with **Actual vs Budget variance an
 Interactive report built with **Power BI Desktop** and **Power Query** from `financial_data_scored.csv` (Budget vs. Actual tracking and **Isolation Forest** anomaly detection).
 
 ### 1. Financial Overview (`Overview`)
-![Overview Dashboard](dashboard/Screenshots/overview_dashboard.png)
+![Overview Dashboard](dashboard/Screenshots/Overview Dashboard.png)
 
 ### 2. Detected Anomalies (`Anomalies`)
-![Anomalies Dashboard](dashboard/Screenshots/anomalies_dashboard.png)
+![Anomalies Dashboard](dashboard/Screenshots/Anomalies Dashboard.png)
 
 ## 🛠️ Tech Stack (matching job requirements)
 | Requirement | Implementation |
